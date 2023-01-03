@@ -55,6 +55,8 @@ export const ViewDegrees = styled.View`
 export const IconWeatherCurrent = styled.Image`
   width: 135px;
   height: 123px;
+  opacity: 0.8;
+  margin-bottom: 32px;
 `
 
 export const DescriptionWeatherCurrent = styled.Text`
@@ -273,13 +275,13 @@ export const ViewSunrise = styled.View`
 `
 
 export const LabelSunrise = styled.Text`
-  font-size: 10px;
+  font-size: 12px;
   font-family: ${({ theme }) => theme.fonts.regular};
   color: ${({ theme }) => theme.colors.label};
 `
 
 export const LabelTimeSunrise = styled.Text`
-  font-size: 12px;
+  font-size: 14px;
   font-family: ${({ theme }) => theme.fonts.regular};
   color: ${({ theme }) => theme.colors.text};
 `
@@ -298,13 +300,13 @@ export const ViewSunset = styled.View`
 `
 
 export const LabelSunset = styled.Text`
-  font-size: 10px;
+  font-size: 12px;
   font-family: ${({ theme }) => theme.fonts.regular};
   color: ${({ theme }) => theme.colors.label};
 `
 
 export const LabelTimeSunset = styled.Text`
-  font-size: 12px;
+  font-size: 14px;
   font-family: ${({ theme }) => theme.fonts.regular};
   color: ${({ theme }) => theme.colors.text};
 `
@@ -316,14 +318,14 @@ export const IconSunset = styled.Image`
 `
 
 export const LabelLenghtOfDay = styled.Text`
-  margin-top: 14px;
-  font-size: 10px;
+  margin-top: 32px;
+  font-size: 12px;
   font-family: ${({ theme }) => theme.fonts.regular};
   color: ${({ theme }) => theme.colors.text};
 `
 
 export const LabelRemainingDayLight = styled.Text`
-  font-size: 10px;
+  font-size: 12px;
   font-family: ${({ theme }) => theme.fonts.regular};
   color: ${({ theme }) => theme.colors.text};
 `

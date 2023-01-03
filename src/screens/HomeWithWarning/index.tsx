@@ -1,4 +1,5 @@
 import { Text } from "react-native";
+import { GraficSunriseAndSunset } from "../../components/GraficSunriseAndSunset";
 import { CityName, Container, DegreesValue, DescriptionWeatherCurrent, Footer, IconLocation, IconRain, IconSunrise, IconSunset, IconUpdateLocation, IconWarning, IconWeatherCurrent, LabelAQ, LabelExpectingRainFall, LabelExpectingRainFallTime, LabelLenghtOfDay, LabelPercentualRain, LabelRemainingDayLight, LabelSunrise, LabelSunriseAndSunset, LabelSunset, LabelTimeSunrise, LabelTimeSunset, LabelUV, ScrollViewDetails, TextWarning, ValueAQ, ValueExpectingRainFallTime, ValuePercentualRain, ValueUV, ViewAQ, ViewDegrees, ViewDetailsRain, ViewDetailsWeather, ViewExpectingRainFall, ViewExpectingRainFallTime, ViewGraficSunriseAndSunset, ViewLocation, ViewPercentualRain, ViewRainFall, ViewSunrise, ViewSunriseAndSunset, ViewSunset, ViewUV, ViewWarning } from "./styles";
 
 export default function HomeWithWarning() {
@@ -19,9 +20,9 @@ export default function HomeWithWarning() {
       <ScrollViewDetails>
         <ViewDegrees>
           <IconWeatherCurrent
-            source={require('./../../assets/clouds.png')}
+            source={require('./../../assets/rain.png')}
           />
-          <DescriptionWeatherCurrent>Nuvens dispersas</DescriptionWeatherCurrent>
+          <DescriptionWeatherCurrent>Chuva intensa</DescriptionWeatherCurrent>
           <DegreesValue>31°</DegreesValue>
         </ViewDegrees>
 
@@ -80,20 +81,17 @@ export default function HomeWithWarning() {
 
           <ViewGraficSunriseAndSunset>
             <ViewSunrise>
-              <LabelSunrise>NASCER DO SOL</LabelSunrise>
+              <LabelSunrise>Nascer do Sol</LabelSunrise>
               <LabelTimeSunrise>06:25 AM</LabelTimeSunrise>
-              <IconSunrise
-                source={require("./../../assets/sunrise.png")}
-              />
             </ViewSunrise>
 
             <ViewSunset>
-              <LabelSunset>NASCER DO SOL</LabelSunset>
+              <LabelSunset>Pôr do Sol</LabelSunset>
               <LabelTimeSunset>06:25 AM</LabelTimeSunset>
-              <IconSunset
-                source={require("./../../assets/sunset.png")}
-              />
             </ViewSunset>
+            <GraficSunriseAndSunset 
+              iconName="clouds"
+            />
           </ViewGraficSunriseAndSunset>
 
           <LabelLenghtOfDay>Tamanho do dia: 13H 12M</LabelLenghtOfDay>
