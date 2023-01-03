@@ -1,22 +1,9 @@
-import { Text } from "react-native";
 import { GraficSunriseAndSunset } from "../../components/GraficSunriseAndSunset";
-import { CityName, Container, DegreesValue, DescriptionWeatherCurrent, Footer, IconLocation, IconRain, IconSunrise, IconSunset, IconUpdateLocation, IconWarning, IconWeatherCurrent, LabelAQ, LabelExpectingRainFall, LabelExpectingRainFallTime, LabelLenghtOfDay, LabelPercentualRain, LabelRemainingDayLight, LabelSunrise, LabelSunriseAndSunset, LabelSunset, LabelTimeSunrise, LabelTimeSunset, LabelUV, ScrollViewDetails, TextWarning, ValueAQ, ValueExpectingRainFallTime, ValuePercentualRain, ValueUV, ViewAQ, ViewDegrees, ViewDetailsRain, ViewDetailsWeather, ViewExpectingRainFall, ViewExpectingRainFallTime, ViewGraficSunriseAndSunset, ViewLocation, ViewPercentualRain, ViewRainFall, ViewSunrise, ViewSunriseAndSunset, ViewSunset, ViewUV, ViewWarning } from "./styles";
+import { Container, DegreesValue, DescriptionWeatherCurrent, Footer, IconRain, IconWarning, IconWeatherCurrent, LabelAQ, LabelExpectingRainFall, LabelExpectingRainFallTime, LabelLenghtOfDay, LabelPercentualRain, LabelRemainingDayLight, LabelSunrise, LabelSunriseAndSunset, LabelSunset, LabelTimeSunrise, LabelTimeSunset, LabelUV, ScrollViewDetails, TextWarning, ValueAQ, ValueExpectingRainFallTime, ValuePercentualRain, ValueUV, ViewAQ, ViewDegrees, ViewDetailsRain, ViewDetailsWeather, ViewExpectingRainFall, ViewExpectingRainFallTime, ViewGraficSunriseAndSunset, ViewPercentualRain, ViewRainFall, ViewSunrise, ViewSunriseAndSunset, ViewSunset, ViewUV, ViewWarning } from "./styles";
 
 export default function HomeWithWarning() {
   return (
     <Container>
-      <ViewLocation>
-        <IconLocation
-          source={require('./../../assets/location.png')}
-        />
-        <CityName>
-          Espera Feliz, MG
-        </CityName>
-        <IconUpdateLocation
-          source={require('./../../assets/loop.png')}
-        />
-      </ViewLocation>
-
       <ScrollViewDetails>
         <ViewDegrees>
           <IconWeatherCurrent
