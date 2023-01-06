@@ -9,11 +9,14 @@ import { PermissionsAndroid } from 'react-native';
 import Geolocation from '@react-native-community/geolocation';
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
+import Config from "react-native-config";
+
 import {
   AuthProviderProps,
   IAuthContextData,
   WeatherCurrentData
 } from "./@types";
+
 import { api } from "../services/api";
 
 const AuthContext = createContext({} as IAuthContextData)
@@ -22,8 +25,8 @@ function AuthProvider({ children }: AuthProviderProps) {
   const [weatherStorageLoading, setWeatherStorageLoading] = useState(true)
 
   const weatherStorageKey = '@weatherApp:weather'
-  const apiKey = '6a81e15bb5bb2a68bc3c10042802e76a'
-  
+  const apiKey = Config.API_KEY
+
   const [currentWeather, setCurrentWeather] = useState({} as WeatherCurrentData)
 
   const [position, setPosition] = useState()
@@ -43,6 +46,7 @@ function AuthProvider({ children }: AuthProviderProps) {
       );
       if (granted === PermissionsAndroid.RESULTS.GRANTED) {
         console.log('You can use the location');
+        return true
       } else {
         console.log('Location permission denied');
       }
@@ -73,7 +77,12 @@ function AuthProvider({ children }: AuthProviderProps) {
   }
 
   async function getCurrentWeatherWithLocation(latitude: string, longitude: string) {
-    await requestLocationPermission()
+    const hasPermission = await requestLocationPermission();
+
+    if (!hasPermission) {
+      return;
+    }
+    
     await getLocation()
     await getCurrentWeather(latitude, longitude)
   }

@@ -20,7 +20,7 @@ export const ViewDegrees = styled.View`
 
 export const IconWeatherCurrent = styled.Image`
   width: ${RFValue(185)}px;
-  height: ${RFValue(185)}px;
+  height: ${RFValue(165)}px;
 `
 
 export const DescriptionWeatherCurrent = styled.Text`
@@ -57,7 +57,7 @@ export const ViewExpectingRainFall = styled.View`
   align-items: flex-start;
   width: ${RFValue(327)}px;
   height: ${RFValue(163)}px;
-  background-color: ${({ theme }) => theme.colors.title};
+  background-color: ${({ theme }) => theme.colors.background_secondary};
   border-radius: 11px;
   padding: 16px 20px;
 `
@@ -71,8 +71,8 @@ export const ViewRainFall = styled.View`
 `
 
 export const IconRain = styled.Image`
-  width: 95px;
-  height: 98px;
+  width: 75px;
+  height: 78px;
   opacity: 0.5;
 `
 
