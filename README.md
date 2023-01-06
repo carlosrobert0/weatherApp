@@ -82,7 +82,7 @@ npm run android
 Rode o projeto para ios
 [doc](https://react-native.rocketseat.dev/ios/macos) </br> 
 
-## Telas da aplicação :arrow_forward:
+## Telas da aplicação 
 
 Tela inicial de quando usuario entra no aplicativo e ainda nao permitiu acesso a localização
 ![empty](https://user-images.githubusercontent.com/45858897/211081984-883cf2ee-acf2-4e43-ab77-c82649d09642.png)
