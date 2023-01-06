@@ -55,6 +55,5 @@ export interface WeatherCurrentData {
 export interface IAuthContextData {
   currentWeather: WeatherCurrentData | any;
   position: any;
-  weatherStorageLoading: boolean;
   getCurrentWeatherWithLocation(latitude: string, longitude: string): Promise<any>
 }

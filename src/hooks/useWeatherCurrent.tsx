@@ -21,12 +21,10 @@ import { api } from "../services/api";
 
 const AuthContext = createContext({} as IAuthContextData)
 
-function AuthProvider({ children }: AuthProviderProps) {
-  const [weatherStorageLoading, setWeatherStorageLoading] = useState(true)
-
+function WeatherProvider({ children }: AuthProviderProps) {
   const weatherStorageKey = '@weatherApp:weather'
   const apiKey = Config.API_KEY
-
+  
   const [currentWeather, setCurrentWeather] = useState({} as WeatherCurrentData)
 
   const [position, setPosition] = useState()
@@ -70,19 +68,23 @@ function AuthProvider({ children }: AuthProviderProps) {
   };
 
   async function getCurrentWeather(latitude: string, longitude: string) {
-    const response = await api.get(`weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&lang=pt_br`)
-
-    setCurrentWeather(response.data)
-    await AsyncStorage.setItem(weatherStorageKey, JSON.stringify(response.data))
+    try {
+      const response = await api.get(`weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&lang=pt_br`)
+      
+      setCurrentWeather(response.data)
+      await AsyncStorage.setItem(weatherStorageKey, JSON.stringify(response.data))
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   async function getCurrentWeatherWithLocation(latitude: string, longitude: string) {
     const hasPermission = await requestLocationPermission();
 
     if (!hasPermission) {
-      return;
+      return
     }
-    
+
     await getLocation()
     await getCurrentWeather(latitude, longitude)
   }
@@ -95,23 +97,16 @@ function AuthProvider({ children }: AuthProviderProps) {
         const weatherCurrentStorage = JSON.parse(weatherStoraged) as WeatherCurrentData
         setCurrentWeather(weatherCurrentStorage)
       }
-
-      setWeatherStorageLoading(false)
     }
-
+    
     loadWeatherStorageData()
-  }, [weatherStorageKey])
-
-  useEffect(() => {
-
-  }, [currentWeather])
+  }, [weatherStorageKey, currentWeather])
 
   return (
     <AuthContext.Provider value={{
       getCurrentWeatherWithLocation,
       position,
       currentWeather,
-      weatherStorageLoading,
     }}>
       {children}
     </AuthContext.Provider >
@@ -124,4 +119,4 @@ function useWeatherCurrent() {
   return context
 }
 
-export { AuthProvider, useWeatherCurrent }
+export { WeatherProvider, useWeatherCurrent }

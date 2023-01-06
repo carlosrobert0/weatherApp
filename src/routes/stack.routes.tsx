@@ -12,8 +12,9 @@ export function StackRoutes() {
   const main = currentWeather?.weather?.[0].main
 
   useEffect(() => {
-    
-  }, [])
+
+  }, [main])
+  
   return (
     <Navigator screenOptions={{ headerShown: false }} >
       {
