@@ -8,7 +8,7 @@ export const Container = styled.View`
 
 export const Vector = styled.Image`
   position: absolute;
-  top: 92.49%;
+  top: 93.5%;
   right: 83.1%;
 `
 
@@ -35,7 +35,7 @@ export const Line2 = styled.Image`
   position: absolute;
   left: 82.07%;
   right: 3.45%;
-  top: 32.49%;
+  top: 38%;
   bottom: 31.51%;
 
   border: 1px dashed #C4C4C4;
@@ -45,16 +45,16 @@ export const Line2 = styled.Image`
 export const Line3 = styled.Image`
   position: absolute;
   left: 0%;
-  right: 0%;
-  top: 92.49%;
+  right: 20%;
+  top: 93.4%;
   bottom: 31.51%;
 
   border: 1px dashed #C4C4C4;
 `
 
 export const IconWeather = styled.Image`
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   position: absolute;
   left: 35.6%;
   right: 56.8%;
