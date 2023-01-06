@@ -95,24 +95,6 @@ Tela de quando o usuario permitiu a localização e o clima está sem chuva
 ![clouds](https://user-images.githubusercontent.com/45858897/211082099-7439c0b5-d6dc-4de0-a59d-b226b6d3d684.png)
 ![cloud](https://user-images.githubusercontent.com/45858897/211082132-bbca920f-dcf3-4aa9-886b-9d8c5e8542c2.png)
 
-Acesse o projeto
-```
-cd weatherApp
-```
-
-Instale as dependencias do projeto
-```
-npm install
-```
-
-Rode o projeto para android
-```
-npm run android
-```
-
-Rode o projeto para ios
-[doc](https://react-native.rocketseat.dev/ios/macos) </br> 
-
 ## Licença 
 
 The [MIT License]() (MIT)
