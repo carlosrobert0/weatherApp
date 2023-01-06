@@ -85,13 +85,15 @@ Rode o projeto para ios
 ## Telas da aplicação :arrow_forward:
 
 Tela inicial de quando usuario entra no aplicativo e ainda nao permitiu acesso a localização
-image.png
+![empty](https://user-images.githubusercontent.com/45858897/211081984-883cf2ee-acf2-4e43-ab77-c82649d09642.png)
 
 Tela de quando o usuario permitiu localização e o clima está chuvoso
-image.png
+![rain1](https://user-images.githubusercontent.com/45858897/211082037-066c2dd6-57f2-4c30-a9de-f8e8ea0c84f7.png)
+![rain2](https://user-images.githubusercontent.com/45858897/211082061-d1531118-81ee-4759-b88f-e1c8ffbb4e7c.png)
 
 Tela de quando o usuario permitiu a localização e o clima está sem chuva
-image.png
+![clouds](https://user-images.githubusercontent.com/45858897/211082099-7439c0b5-d6dc-4de0-a59d-b226b6d3d684.png)
+![cloud](https://user-images.githubusercontent.com/45858897/211082132-bbca920f-dcf3-4aa9-886b-9d8c5e8542c2.png)
 
 Acesse o projeto
 ```
